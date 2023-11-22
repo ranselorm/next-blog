@@ -8,7 +8,7 @@ export default function Home() {
     <div>
       {/* <Featured /> */}
       {/* <CategoryList /> */}
-      <div className="flex gap-[50px]">
+      <div className="flex gap-[50px] mt-[50px]">
         <Card />
         <Menu />
       </div>

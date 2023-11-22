@@ -4,9 +4,9 @@ import Pagination from "./Pagination";
 
 const Card = () => {
   return (
-    <div className="w-9/12">
+    <div className="lg:w-9/12 w-full">
       <h2>Recent Posts</h2>
-      <div className="grid grid-cols-2 gap-10">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
         <CardList />
         <CardList />
         <CardList />

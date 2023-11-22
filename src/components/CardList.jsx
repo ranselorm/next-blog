@@ -4,11 +4,11 @@ import Link from "next/link";
 const CardList = () => {
   return (
     <div className="flex gap-6 items-center w-full">
-      <div className="relative w-[150px] h-[150px] rounded-2xl overflow-hidden">
+      <div className="relative w-[150px] h-[130px] rounded-lg overflow-hidden">
         <Image src="/p1.jpeg" alt="" fill />
       </div>
       <div className="flex-1 flex flex-col gap-y-2">
-        <span className="text-[14px] bg-gray-200 w-max px-4 py-1 rounded-xl">
+        <span className="lg:text-[14px] text-[10px] bg-gray-200 w-max px-4 py-1 rounded-xl">
           CULTURE
         </span>
 
@@ -18,13 +18,10 @@ const CardList = () => {
             dolor
           </h2>
         </Link>
-        {/* <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius, vel
-          debitis, iste laborum consequatur, molestias officia ullam dolores
-          culpa dicta pariatur assumenda ut. Consectetur amet libero corrupti
-          asperiores quos quidem!
-        </p> */}
-        <span className="text-[14px]">11-02-2032</span>
+        <div className="flex justify-between">
+          <span className="text-[14px]">11-02-2032</span>
+          <span className="text-xs">Comments</span>
+        </div>
       </div>
     </div>
   );
