@@ -36,7 +36,7 @@ const CategoryList = () => {
   return (
     <div>
       <h1>Popular categories</h1>
-      <div className="flex justify-center gap-x-10">
+      <div className="flex flex-wrap justify-center items-center gap-8">
         {categoris.map((cat, index) => (
           <Link
             href="/blog?cat=style"
