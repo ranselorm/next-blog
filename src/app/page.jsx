@@ -1,15 +1,15 @@
 import Featured from "@/components/Featured";
 import CategoryList from "@/components/CategoryList";
-import CardList from "@/components/CardList";
+import Card from "@/components/Card";
 import Menu from "@/components/Menu";
 
 export default function Home() {
   return (
     <div>
       {/* <Featured /> */}
-      <CategoryList />
-      <div>
-        <CardList />
+      {/* <CategoryList /> */}
+      <div className="flex gap-[50px]">
+        <Card />
         <Menu />
       </div>
     </div>

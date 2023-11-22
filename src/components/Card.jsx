@@ -1,0 +1,20 @@
+import React from "react";
+import CardList from "./CardList";
+import Pagination from "./Pagination";
+
+const Card = () => {
+  return (
+    <div className="w-9/12">
+      <h2>Recent Posts</h2>
+      <div className="grid grid-cols-2 gap-10">
+        <CardList />
+        <CardList />
+        <CardList />
+        <CardList />
+      </div>
+      <Pagination />
+    </div>
+  );
+};
+
+export default Card;
