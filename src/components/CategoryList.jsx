@@ -32,23 +32,21 @@ const categoris = [
     bgColor: "orange",
   },
 ];
-const CategoryList = () => {
+const CategoryList = ({ title, image, bgColor }) => {
   return (
     <div>
-      <h1>Popular categories</h1>
-      <div className="flex flex-wrap justify-center items-center gap-8">
-        {categoris.map((cat, index) => (
-          <Link
-            href="/blog?cat=style"
-            style={{ backgroundColor: cat.bgColor }}
-            className="flex items-center px-5 py-2 gap-4 rounded-xl"
-          >
-            <div className="relative w-[32px] h-[32px] rounded-full overflow-hidden">
-              <Image src={cat.image} alt="" fill className="object-cover" />
-            </div>
-            <span>{cat.title}</span>
-          </Link>
-        ))}
+      {/* <h1>Popular Categories</h1> */}
+      <div className="">
+        <Link
+          href="/blog?cat=style"
+          style={{ backgroundColor: bgColor }}
+          className="flex items-center px-2 py-1 gap-2 rounded-xl"
+        >
+          <div className="relative w-[32px] h-[32px] rounded-full overflow-hidden">
+            <Image src={image} alt="" fill className="object-cover" />
+          </div>
+          <span>{title}</span>
+        </Link>
       </div>
     </div>
   );

@@ -5,13 +5,23 @@ import Menu from "@/components/Menu";
 
 export default function Home() {
   return (
-    <div>
+    <div className="mt-[100px] ">
       {/* <Featured /> */}
-      {/* <CategoryList /> */}
-      <div className="flex gap-[50px] mt-[50px]">
+      <div className="flex items-center justify-between">
+        <div className="flex  gap-6 w-full">
+          <CategoryList title="Fashion" image="/p1.jpeg" bgColor="green" />
+          <CategoryList title="Fashion" image="/p1.jpeg" bgColor="green" />
+          <CategoryList title="Fashion" image="/p1.jpeg" bgColor="green" />
+          <CategoryList title="Fashion" image="/p1.jpeg" bgColor="green" />
+          <CategoryList title="Fashion" image="/p1.jpeg" bgColor="green" />
+          <CategoryList title="Fashion" image="/p1.jpeg" bgColor="green" />
+        </div>
+        <div>Search</div>
+      </div>
+      <main className="flex gap-[50px] mt-[50px]">
         <Card />
         <Menu />
-      </div>
+      </main>
     </div>
   );
 }
