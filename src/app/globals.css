@@ -24,19 +24,15 @@ a {
   text-decoration: none;
 }
 
-/* .container {
-  min-height: 100vh;
-  background-color: var(--bg);
-  color: var(--textColor);
-} */
-
 .wrapper {
-  max-width: 1000px;
-  background-color: black;
+  max-width: 100%;
   margin: 0 auto;
-  padding: 0 80px;
-  color: white;
+  padding: 0 40px;
+  color: black;
 }
 .container {
-  @apply max-w-[1000px] bg-white mx-auto;
+  @apply max-w-[1200px] mx-auto text-black;
+}
+.wrapper {
+  @apply mx-auto text-black px-[20px];
 }
