@@ -18,7 +18,7 @@ const CardList = () => {
             dolor
           </h2>
         </Link>
-        <div className="flex justify-between items-center">
+        <div className="flex gap-4 items-center">
           <span className="text-[14px]">11-02-2032</span>
           <span className="text-xs">Comments</span>
         </div>

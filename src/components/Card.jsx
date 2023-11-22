@@ -11,6 +11,8 @@ const Card = () => {
         <CardList />
         <CardList />
         <CardList />
+        <CardList />
+        <CardList />
       </div>
       <Pagination />
     </div>

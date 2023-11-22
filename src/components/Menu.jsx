@@ -5,8 +5,8 @@ const Menu = () => {
   return (
     <div className="hidden lg:flex w-3/12 flex-col gap-y-4">
       <article className="">
-        <h3>What's hot</h3>
-        <h2>Most Popular</h2>
+        <h3 className="text-[14px]">What's hot</h3>
+        <h2 className="font-bold">Most Popular</h2>
       </article>
       <div className="flex flex-col gap-y-6">
         <Link href="#" className="flex flex-col gap-2">
@@ -46,7 +46,7 @@ const Menu = () => {
           </div>
         </Link>
         <div>
-          <h2 className="mb-10">Popular Categories</h2>
+          <h2 className="mb-10 font-bold">Popular Categories</h2>
           <div className="grid grid-cols-2 gap-6">
             <CategoryList title="Fashion" image="/p1.jpeg" bgColor="red" />
             <CategoryList title="Fashion" image="/p1.jpeg" bgColor="blue" />
