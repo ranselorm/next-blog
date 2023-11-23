@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="flex justify-between flex-col lg:flex-row">
         <div className="flex-1">
           <h2 className="mb-4 font-semibold">Next-Blog</h2>
-          <p className="text-[15px] lg:w-10/12 mb-10">
+          <p className="text-[15px] lg:w-10/12 mb-10 leading-[27px]">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore
             molestiae nobis fuga voluptatem, quis error exercitationem magnam
             amet dolorem, laudantium aut cum obcaecati? Non sunt, nobis dolorum
