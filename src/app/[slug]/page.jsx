@@ -1,7 +1,7 @@
+import Image from "next/image";
 import Menu from "@/components/Menu";
 import NewComment from "@/components/NewComment";
-import Image from "next/image";
-import React from "react";
+import Comments from "@/components/Comments";
 
 const SingleBlogPost = () => {
   return (
@@ -42,6 +42,7 @@ const SingleBlogPost = () => {
             voluptatum? Aut excepturi sit atque.
           </p>
           <NewComment />
+          <Comments />
         </div>
       </div>
       <Menu />
