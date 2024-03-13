@@ -3,10 +3,16 @@ import React from "react";
 const Login = () => {
   return (
     <div className="flex justify-center items-center mt-[60px]">
-      <div>
-        <div>Login with Google</div>
-        <div>Login with GitHub</div>
-        <div>Login with Facebook</div>
+      <div className="bg-gray-100 p-10 flex flex-col gap-y-5">
+        <div className="bg-red-400 text-white p-3 rounded text-center w-full">
+          Login with Google
+        </div>
+        <div className="bg-black text-white p-3 rounded text-center w-full">
+          Login with GitHub
+        </div>
+        <div className="bg-blue-500 text-white p-3 rounded text-center w-full">
+          Login with Facebook
+        </div>
       </div>
     </div>
   );

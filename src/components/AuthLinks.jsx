@@ -12,7 +12,7 @@ const AuthLinks = () => {
         <Link href="/login">Login</Link>
       ) : (
         <>
-          <Link href="/logout">Write</Link>
+          <Link href="/write">Write</Link>
           <span className="cursor-pointer">Logout</span>
         </>
       )}

@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const Write = () => {
   return (
-    <div>
+    <div className="bg-yellow-300">
       <input type="text" placeholder="Title" />
       {/* editor */}
       <div>
