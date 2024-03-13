@@ -36,3 +36,7 @@ a {
 .wrapper {
   @apply mx-auto text-black px-[20px];
 }
+
+.quill {
+  /* background-color: red; */
+}
