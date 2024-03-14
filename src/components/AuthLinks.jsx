@@ -1,3 +1,5 @@
+"use client";
+import { signOut } from "next-auth/react";
 import Link from "next/link";
 // import { CiMenuFries } from "react-icons/ci";
 // import { AiFillApple } from "react-icons/ai";
@@ -13,7 +15,9 @@ const AuthLinks = () => {
       ) : (
         <>
           <Link href="/write">Write</Link>
-          <span className="cursor-pointer">Logout</span>
+          <button className="cursor-pointer" onClick={signOut}>
+            Logout
+          </button>
         </>
       )}
       {/* <AiFillApple /> */}
