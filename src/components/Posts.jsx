@@ -32,7 +32,7 @@ const Posts = () => {
           </div>
           <div className="flex gap-4">
             <div className="flex items-start gap-x-3">
-              <div className="relative w-[60px] h-[50px] rounded overflow-hidden">
+              <div className="relative w-[80px] h-[70px] rounded overflow-hidden">
                 <Image
                   src="/images/nana.jpeg"
                   alt=""
@@ -45,14 +45,40 @@ const Posts = () => {
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Pariatur, odio.
                 </h2>
-                <div className="flex items-center gap-x-4">
-                  <div className="flex items-center gap-x-2 text-gray-400">
+                <div className="flex items-center gap-x-4 text-[10px]">
+                  <div className="flex items-center gap-x-1 text-gray-400">
                     <MdOutlineDateRange />
-                    <span className="text-sm">June 17, 2024</span>
+                    <span className="">June 17, 2024</span>
                   </div>
-                  <div className="flex items-center gap-x-2 text-gray-400">
+                  <div className="flex items-center gap-x-1 text-gray-400">
                     <FaReadme />
-                    <span className="text-sm">2 mins read</span>
+                    <span className="">2 mins read</span>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div className="flex items-start gap-x-3">
+              <div className="relative w-[80px] h-[70px] rounded overflow-hidden">
+                <Image
+                  src="/images/nana.jpeg"
+                  alt=""
+                  fill
+                  className="object-cover w-full h-full"
+                />
+              </div>
+              <article className="">
+                <h2 className="text-[14px] w-[250px] -mt-2">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Pariatur, odio.
+                </h2>
+                <div className="flex items-center gap-x-4 text-[10px]">
+                  <div className="flex items-center gap-x-1 text-gray-400">
+                    <MdOutlineDateRange />
+                    <span className="">June 17, 2024</span>
+                  </div>
+                  <div className="flex items-center gap-x-1 text-gray-400">
+                    <FaReadme />
+                    <span className="">2 mins read</span>
                   </div>
                 </div>
               </article>

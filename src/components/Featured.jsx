@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const Featured = () => {
   return (
-    <section className="mt-[30px]">
+    <section className="mt-[30px] font-primary">
       <main className="flex gap-3 h-[320px]">
         <div className="w-1/2 relative rounded overflow-hidden">
           <div className="w-full h-full relative">
