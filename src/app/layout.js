@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
       <body className="">
         <AuthProvider>
           {/* <ThemeContextProvider> */}
-          <div className="px-4 md:px-10 lg:px-20">
+          <div className="px-4 md:px-8">
             {/* <Navbar /> */}
             {children}
             {/* <Footer /> */}

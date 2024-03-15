@@ -9,7 +9,13 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        primary: ["var(--font-primary)"],
+        secondary: ["var(--font-secondary)"],
+        main: ["Nunito", "sans-serif"],
+      },
+    },
   },
   plugins: [],
 };
