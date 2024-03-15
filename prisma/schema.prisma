@@ -42,8 +42,8 @@ model User {
   image         String?
   accounts      Account[]
   sessions      Session[]
-
-  Post Post[]
+  Post          Post[]
+  Comment       Comment[]
 }
 
 model VerificationToken {
@@ -72,11 +72,16 @@ model Post {
   cat       Category @relation(fields: [catSlug], references: [slug])
   userEmail String
   user      User     @relation(fields: [userEmail], references: [email])
-  comment   Comment[]
+  comments  Comment[]
+  createdAt DateTime @default(now())
+
 }
 model Comment {
   id        String   @id @default(cuid()) @map("_id")
   desc      String
   postSlug  String
   post      Post     @relation(fields: [postSlug], references: [slug])
+  userEmail String
+  user User @relation(fields: [userEmail], references: [email])
+  createdAt DateTime @default(now())
 }
