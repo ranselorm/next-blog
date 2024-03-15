@@ -8,7 +8,7 @@ const Posts = () => {
       <div>
         <h3>Latest Posts</h3>
         <div className="flex gap-2">
-          <div className="h-[290px] w-[340px] relative rounded overflow-hidden">
+          <div className="h-[250px] w-4/12 relative rounded overflow-hidden">
             <div className="w-full h-full relative">
               <Image
                 src="/images/lewy.jpg"
@@ -30,8 +30,8 @@ const Posts = () => {
               </article>
             </div>
           </div>
-          <div className="flex gap-4">
-            <div className="flex items-start gap-x-3">
+          <div className="grid grid-cols-2 gap-3 w-9/12">
+            <div className="flex gap-x-3 h-max border-y py-2">
               <div className="relative w-[80px] h-[70px] rounded overflow-hidden">
                 <Image
                   src="/images/nana.jpeg"
@@ -41,7 +41,7 @@ const Posts = () => {
                 />
               </div>
               <article className="">
-                <h2 className="text-[14px] w-[250px] -mt-2">
+                <h2 className="text-[14px] w-[250px]">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Pariatur, odio.
                 </h2>
@@ -57,7 +57,7 @@ const Posts = () => {
                 </div>
               </article>
             </div>
-            <div className="flex items-start gap-x-3">
+            <div className="flex gap-x-3 h-max border-y py-2">
               <div className="relative w-[80px] h-[70px] rounded overflow-hidden">
                 <Image
                   src="/images/nana.jpeg"
@@ -67,7 +67,59 @@ const Posts = () => {
                 />
               </div>
               <article className="">
-                <h2 className="text-[14px] w-[250px] -mt-2">
+                <h2 className="text-[14px] w-[250px]">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Pariatur, odio.
+                </h2>
+                <div className="flex items-center gap-x-4 text-[10px]">
+                  <div className="flex items-center gap-x-1 text-gray-400">
+                    <MdOutlineDateRange />
+                    <span className="">June 17, 2024</span>
+                  </div>
+                  <div className="flex items-center gap-x-1 text-gray-400">
+                    <FaReadme />
+                    <span className="">2 mins read</span>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div className="flex gap-x-3 h-max border-y py-2">
+              <div className="relative w-[80px] h-[70px] rounded overflow-hidden">
+                <Image
+                  src="/images/nana.jpeg"
+                  alt=""
+                  fill
+                  className="object-cover w-full h-full"
+                />
+              </div>
+              <article className="">
+                <h2 className="text-[14px] w-[250px]">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Pariatur, odio.
+                </h2>
+                <div className="flex items-center gap-x-4 text-[10px]">
+                  <div className="flex items-center gap-x-1 text-gray-400">
+                    <MdOutlineDateRange />
+                    <span className="">June 17, 2024</span>
+                  </div>
+                  <div className="flex items-center gap-x-1 text-gray-400">
+                    <FaReadme />
+                    <span className="">2 mins read</span>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div className="flex gap-x-3 h-max border-y py-2">
+              <div className="relative w-[80px] h-[70px] rounded overflow-hidden">
+                <Image
+                  src="/images/nana.jpeg"
+                  alt=""
+                  fill
+                  className="object-cover w-full h-full"
+                />
+              </div>
+              <article className="">
+                <h2 className="text-[14px] w-[250px]">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Pariatur, odio.
                 </h2>
