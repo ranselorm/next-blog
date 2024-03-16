@@ -6,8 +6,7 @@ import Comments from "@/components/Comments";
 const SingleBlogPost = () => {
   return (
     <div className="mt-[100px] flex items-center justify-between">
-      <div className="lg:w-7/12">
-        {/* text */}
+      <div className="lg:w-10/12 mx-auto">
         <article className="">
           <h1 className="text-[30px] leading-[37px]">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. laborum sit
@@ -22,30 +21,21 @@ const SingleBlogPost = () => {
         <div className="relative w-full lg:h-[400px] h-[300px] rounded-lg overflow-hidden">
           <Image src="/p1.jpeg" alt="" fill className="object-cover" />
         </div>
-        <div className="mt-[30px]">
-          <p className="my-10 leading-[27px]">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum,
-            ratione vero, dolore voluptatem nam adipisci eos praesentium quam
-            numquam assumenda blanditiis tempora, repellat dolorem doloribus
-            voluptatum? Aut excepturi sit atque.
-          </p>
-          <p className="my-10 leading-[27px]">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum,
-            ratione vero, dolore voluptatem nam adipisci eos praesentium quam
-            numquam assumenda blanditiis tempora, repellat dolorem doloribus
-            voluptatum? Aut excepturi sit atque.
-          </p>
-          <p className="my-10 leading-[27px]">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum,
-            ratione vero, dolore voluptatem nam adipisci eos praesentium quam
-            numquam assumenda blanditiis tempora, repellat dolorem doloribus
-            voluptatum? Aut excepturi sit atque.
-          </p>
-          <NewComment />
-          <Comments />
+        <div className="mt-[30px] mx-auto">
+          <div>
+            <p className="my-10 leading-[27px] w-8/12">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum,
+              ratione vero, dolore voluptatem nam adipisci eos praesentium quam
+              numquam assumenda blanditiis tempora, repellat dolorem doloribus
+              voluptatum? Aut excepturi sit atque.
+            </p>
+          </div>
+
+          {/* <NewComment />
+          <Comments /> */}
         </div>
       </div>
-      <Menu />
+      {/* <Menu /> */}
     </div>
   );
 };
