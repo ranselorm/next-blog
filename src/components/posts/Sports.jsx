@@ -51,7 +51,7 @@ const Sports = () => {
                 <article className="flex">
                   <div className="h-4 w-[3px] bg-red-500 mx-2 group-hover:h-10 transition-all rounded hidden md:flex" />
                   <div>
-                    <h2 className="text-[14px] w-[250px]">
+                    <h2 className="text-[14px] w-[230px]">
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
                       Pariatur, odio.
                     </h2>
