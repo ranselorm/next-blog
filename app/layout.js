@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className="bg-gray-100">
         <AuthProvider>
-          {/* <Navbar /> */}
+          <Navbar />
           <div className="px-4 md:px-8">
             {children}
             {/* <Footer /> */}

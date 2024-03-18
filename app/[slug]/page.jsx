@@ -2,9 +2,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import { MdOutlineDateRange, MdOutlineRemoveRedEye } from "react-icons/md";
-// import Facebook from "../../public/icons/facebook.svg";
-
-// import { DialogUsageExample } from "@/components/Tabs";
+import { DialogUsageExample } from "../../components/Tabs";
 
 const SingleBlogPost = () => {
   const [timeOfDay, setTimeOfDay] = useState("");
@@ -96,7 +94,7 @@ const SingleBlogPost = () => {
               </div>
             </div>
           </div> */}
-          {/* <DialogUsageExample /> */}
+          <DialogUsageExample />
         </div>
       </main>
     </section>
