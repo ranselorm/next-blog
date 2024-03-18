@@ -1,12 +1,24 @@
+"use client";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import { MdOutlineDateRange, MdOutlineRemoveRedEye } from "react-icons/md";
-import Facebook from "../../../public/icons/facebook.svg";
-import Twitter from "../../../public/icons/twitter.svg";
-import Youtube from "../../../public/icons/youtube.svg";
-import TikTok from "../../../public/icons/tiktok.svg";
-import Whatsapp from "../../../public/icons/whatsapp.svg";
+// import Facebook from "../../public/icons/facebook.svg";
+
+// import { DialogUsageExample } from "@/components/Tabs";
 
 const SingleBlogPost = () => {
+  const [timeOfDay, setTimeOfDay] = useState("");
+  useEffect(() => {
+    const currentTime = new Date().getHours();
+
+    let greeting;
+    if (currentTime < 12) greeting = "Good Morning";
+    else if (currentTime < 18) greeting = "Good Afternoon";
+    else greeting = "Good Evening";
+
+    setTimeOfDay(greeting);
+  }, []);
+
   return (
     <section className="mt-[50px] flex items-center justify-between font-primary">
       <main className="w-full flex justify-between ">
@@ -55,7 +67,7 @@ const SingleBlogPost = () => {
           </section>
         </article>
         <div className="w-3/12 border-2">
-          <div className="bg-white px-2 py-6">
+          {/* <div className="bg-white px-2 py-6">
             <h3 className="font-semibold text-md uppercase">Social Networks</h3>
             <div className="grid grid-cols-3 gap-3">
               <div className="bg-gray-100 px-2 py-1 w-max flex items-center gap-x-2 rounded">
@@ -83,7 +95,8 @@ const SingleBlogPost = () => {
                 <p className="text-[12px]">Twitter</p>
               </div>
             </div>
-          </div>
+          </div> */}
+          {/* <DialogUsageExample /> */}
         </div>
       </main>
     </section>

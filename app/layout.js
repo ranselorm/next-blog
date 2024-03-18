@@ -1,9 +1,9 @@
 import "./globals.css";
 import { Inter } from "next/font/google";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-// import { ThemeContextProvider } from "@/context/ThemeContext";
-import AuthProvider from "@/providers/AuthProvider";
+// import Navbar from "@/components/Navbar";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import AuthProvider from "../providers/AuthProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,8 +17,8 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className="bg-gray-100">
         <AuthProvider>
+          {/* <Navbar /> */}
           <div className="px-4 md:px-8">
-            {/* <Navbar /> */}
             {children}
             {/* <Footer /> */}
           </div>
