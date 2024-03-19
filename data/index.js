@@ -1,0 +1,42 @@
+export const posts = [
+  {
+    id: "1",
+    title: "Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit",
+    coverImage: "/images/nana.jpeg",
+    body: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid qui beatae ipsum ipsam sint? Molestiae illum similique veniam iste eaque, sapiente nostrum? Qui, consequuntur repellat? Voluptatum fugiat doloribus sit numquam.",
+    category: "Politics",
+    createdAt: "2024-03-16T12:00:00Z",
+  },
+  {
+    id: "2",
+    title: "Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit",
+    coverImage: "/images/lewy.jpg",
+    body: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid qui beatae ipsum ipsam sint? Molestiae illum similique veniam iste eaque, sapiente nostrum? Qui, consequuntur repellat? Voluptatum fugiat doloribus sit numquam.",
+    category: "Sports",
+    createdAt: "2024-03-16T12:00:00Z",
+  },
+  {
+    id: "3",
+    title: "Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit",
+    coverImage: "/images/stone.jpg",
+    body: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid qui beatae ipsum ipsam sint? Molestiae illum similique veniam iste eaque, sapiente nostrum? Qui, consequuntur repellat? Voluptatum fugiat doloribus sit numquam.",
+    category: "Entertainment",
+    createdAt: "2024-03-16T12:00:00Z",
+  },
+  {
+    id: "4",
+    title: "Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit",
+    coverImage: "/images/zuck.jpeg",
+    body: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid qui beatae ipsum ipsam sint? Molestiae illum similique veniam iste eaque, sapiente nostrum? Qui, consequuntur repellat? Voluptatum fugiat doloribus sit numquam.",
+    category: "Technology",
+    createdAt: "2024-03-16T12:00:00Z",
+  },
+  {
+    id: "5",
+    title: "Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit",
+    coverImage: "/images/oppong.jpg",
+    body: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid qui beatae ipsum ipsam sint? Molestiae illum similique veniam iste eaque, sapiente nostrum? Qui, consequuntur repellat? Voluptatum fugiat doloribus sit numquam.",
+    category: "Politics",
+    createdAt: "2024-03-16T12:00:00Z",
+  },
+];

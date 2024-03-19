@@ -1,5 +1,13 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
+import { posts } from "../data";
+import { getLatestPostByCategory, formattedDate } from "../helpers";
+
+const politicsPosts = getLatestPostByCategory(posts, "Politics");
+const techPosts = getLatestPostByCategory(posts, "Technology");
+const sportsPosts = getLatestPostByCategory(posts, "Sports");
+const entertainmentPosts = getLatestPostByCategory(posts, "Entertainment");
 
 const Featured = () => {
   return (
@@ -8,7 +16,7 @@ const Featured = () => {
         <div className="w-1/2 relative rounded overflow-hidden">
           <div className="w-full h-full relative">
             <Image
-              src="/images/nana.jpeg"
+              src={politicsPosts.coverImage}
               alt=""
               fill
               className="h-full w-full object-cover"
@@ -17,18 +25,20 @@ const Featured = () => {
           <div className="absolute inset-0 bg-black bg-opacity-50" />
           <div className="absolute bottom-2 px-4 text-white">
             <span className="bg-blue-500 px-2 py-1 uppercase text-[10px] font-semibold rounded">
-              Politics
+              {politicsPosts.category}
             </span>
             <article className="">
-              <h3 className="text-xl leading-[25px] my-2">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius
-                error necessitatibus consequatur.
-              </h3>
-              <span className="text-sm">15 March, 2024</span>
+              <Link href={`/12`}>
+                <h3 className="text-xl leading-[25px] my-2">
+                  {politicsPosts.title}
+                </h3>
+              </Link>
+              <span className="text-sm">
+                {formattedDate(politicsPosts.createdAt)}
+              </span>
             </article>
           </div>
         </div>
-        {/* </div> */}
         <div className="w-1/2 flex flex-col gap-y-3">
           <div className="h-1/2 relative rounded overflow-hidden">
             <div className="w-full h-full relative">
@@ -42,13 +52,15 @@ const Featured = () => {
             <div className="absolute inset-0 bg-black bg-opacity-50" />
             <div className="absolute bottom-2 px-4 text-white">
               <span className="bg-teal-500 px-2 py-1 uppercase text-[10px] font-semibold rounded">
-                Technology
+                {techPosts.category}
               </span>
               <article className="">
-                <h3 className="text-lg leading-[20px] my-2">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit
-                </h3>
-                <span className="text-sm">15 March, 2024</span>
+                <Link href="/10">
+                  <h3 className="text-lg leading-[20px] my-2">
+                    {techPosts.title}
+                  </h3>
+                </Link>
+                {formattedDate(techPosts.createdAt)}
               </article>
             </div>
           </div>
@@ -56,7 +68,7 @@ const Featured = () => {
             <div className="h-full w-1/2 relative rounded overflow-hidden">
               <div className="w-full h-full relative">
                 <Image
-                  src="/images/lewy.jpg"
+                  src={sportsPosts.coverImage}
                   alt=""
                   fill
                   className="h-full w-full object-cover"
@@ -65,20 +77,22 @@ const Featured = () => {
               <div className="absolute inset-0 bg-black bg-opacity-50" />
               <div className="absolute bottom-2 px-4 text-white">
                 <span className="bg-black text-white px-2 py-1 uppercase text-[10px] font-semibold rounded">
-                  Sports
+                  {sportsPosts.category}
                 </span>
                 <article className="">
                   <h3 className="text-lg leading-[20px] my-2">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit
+                    {sportsPosts.title}
                   </h3>
-                  <span className="text-sm">15 March, 2024</span>
+                  <span className="text-sm">
+                    {formattedDate(sportsPosts.createdAt)}
+                  </span>
                 </article>
               </div>
             </div>
             <div className="relative h-full w-1/2 rounded overflow-hidden">
               <div className="w-full h-full relative">
                 <Image
-                  src="/images/stone.jpg"
+                  src={entertainmentPosts.coverImage}
                   alt=""
                   fill
                   className="h-full w-full object-cover"
@@ -87,13 +101,13 @@ const Featured = () => {
               <div className="absolute inset-0 bg-black bg-opacity-50" />
               <div className="absolute bottom-2 px-4 text-white">
                 <span className="bg-red-500 px-2 py-1 uppercase text-[10px] font-semibold rounded">
-                  Entertainment
+                  {entertainmentPosts.category}
                 </span>
                 <article className="">
                   <h3 className="text-lg leading-[20px] my-2">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit
+                    {entertainmentPosts.title}
                   </h3>
-                  <span className="text-sm">15 March, 2024</span>
+                  {formattedDate(entertainmentPosts.createdAt)}
                 </article>
               </div>
             </div>

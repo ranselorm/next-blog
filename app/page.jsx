@@ -10,11 +10,11 @@ import News from "../components/News";
 export default function Home() {
   return (
     <div className="mt-[20px]">
-      {/* <Featured />
+      <Featured />
       <div className="mt-10 flex gap-x-4">
         <News />
         <Sidebar />
-      </div> */}
+      </div>
     </div>
   );
 }
