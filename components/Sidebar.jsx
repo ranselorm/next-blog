@@ -7,7 +7,7 @@ const arr = [1, 2, 4];
 
 const Sidebar = () => {
   return (
-    <section className="w-3/12 font-primary">
+    <section className="w-3/12 font-primary hidden lg:block">
       <div className="mb-6">
         <h3 className="font-semibold uppercase bg-black text-white max-w-max py-1 px-2 text-sm rounded">
           Popular posts

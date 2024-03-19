@@ -3,9 +3,11 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination } from "swiper/modules";
 import { posts } from "../data";
 import { getLatestPostByCategory, formattedDate } from "../helpers";
 import "swiper/css";
+import "swiper/css/pagination"; // Import Swiper pagination styles
 
 const politicsPosts = getLatestPostByCategory(posts, "Politics");
 const techPosts = getLatestPostByCategory(posts, "Technology");
@@ -15,75 +17,8 @@ const entertainmentPosts = getLatestPostByCategory(posts, "Entertainment");
 const Featured = () => {
   return (
     <section className="mt-[30px] font-primary">
-      <main className="flex gap-3 h-full md:h-[320px] w-full">
-        {/* Display slider on mobile screens */}
-        <div className="w-full relative rounded md:hidden">
-          <Swiper
-            spaceBetween={10}
-            slidesPerView={1.09}
-            onSlideChange={() => console.log("slide change")}
-            onSwiper={(swiper) => console.log(swiper)}
-          >
-            <SwiperSlide>
-              <div className="w-full h-[200px] relative overflow-hidden rounded-lg">
-                <div className="w-full h-full relative">
-                  <img
-                    src={politicsPosts.coverImage}
-                    alt=""
-                    fill
-                    className="h-full w-full object-cover"
-                  />
-                </div>
-                <div className="absolute inset-0 bg-black bg-opacity-50" />
-                <div className="absolute bottom-2 px-4 text-white">
-                  <span className="bg-blue-500 px-2 py-1 uppercase text-[10px] font-semibold rounded">
-                    {politicsPosts.category}
-                  </span>
-                  <article className="">
-                    <Link href={`/12`}>
-                      <h3 className="text-xl leading-[25px] my-2">
-                        {politicsPosts.title}
-                      </h3>
-                    </Link>
-                    <span className="text-sm">
-                      {formattedDate(politicsPosts.createdAt)}
-                    </span>
-                  </article>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="w-full h-[200px] relative overflow-hidden rounded-lg">
-                <div className="w-full h-full relative">
-                  <img
-                    src={techPosts.coverImage}
-                    alt=""
-                    fill
-                    className="h-full w-full object-cover"
-                  />
-                </div>
-                <div className="absolute inset-0 bg-black bg-opacity-50" />
-                <div className="absolute bottom-2 px-4 text-white">
-                  <span className="bg-blue-500 px-2 py-1 uppercase text-[10px] font-semibold rounded">
-                    {techPosts.category}
-                  </span>
-                  <article className="">
-                    <Link href={`/12`}>
-                      <h3 className="text-xl leading-[25px] my-2">
-                        {techPosts.title}
-                      </h3>
-                    </Link>
-                    <span className="text-sm">
-                      {formattedDate(techPosts.createdAt)}
-                    </span>
-                  </article>
-                </div>
-              </div>
-            </SwiperSlide>
-          </Swiper>
-          {/* Similar structure for other categories */}
-        </div>
-        {/* <div className="w-1/2 relative rounded overflow-hidden">
+      <main className="gap-3 h-full md:h-[320px] w-full hidden md:flex">
+        <div className="w-1/2 relative rounded overflow-hidden">
           <div className="w-full h-full relative">
             <Image
               src={politicsPosts.coverImage}
@@ -108,8 +43,8 @@ const Featured = () => {
               </span>
             </article>
           </div>
-        </div> */}
-        {/* <div className="w-1/2 flex flex-col gap-y-3">
+        </div>
+        <div className="w-1/2 flex flex-col gap-y-3">
           <div className="h-1/2 relative rounded overflow-hidden">
             <div className="w-full h-full relative">
               <Image
@@ -182,8 +117,135 @@ const Featured = () => {
               </div>
             </div>
           </div>
-        </div> */}
+        </div>
       </main>
+
+      {/* Display slider on mobile screens */}
+      <div className="w-full relative md:hidden">
+        <Swiper
+          modules={[Pagination]}
+          className="swiper-container"
+          spaceBetween={10}
+          slidesPerView={1.09}
+          // onSlideChange={() => console.log("slide change")}
+          // onSwiper={(swiper) => console.log(swiper)}
+          // pagination={{ clickable: true }} // Enable pagination dots
+        >
+          <SwiperSlide>
+            <div className="w-full h-[200px] relative overflow-hidden rounded-lg">
+              <div className="w-full h-full relative">
+                <img
+                  src={politicsPosts.coverImage}
+                  alt=""
+                  fill
+                  className="h-full w-full object-cover"
+                />
+              </div>
+              <div className="absolute inset-0 bg-black bg-opacity-50" />
+              <div className="absolute bottom-2 px-4 text-white">
+                <span className="bg-blue-500 px-2 py-1 uppercase text-[10px] font-semibold rounded">
+                  {politicsPosts.category}
+                </span>
+                <article className="">
+                  <Link href={`/12`}>
+                    <h3 className="text-xl leading-[25px] my-2">
+                      {politicsPosts.title}
+                    </h3>
+                  </Link>
+                  <span className="text-sm">
+                    {formattedDate(politicsPosts.createdAt)}
+                  </span>
+                </article>
+              </div>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="w-full h-[200px] relative overflow-hidden rounded-lg">
+              <div className="w-full h-full relative">
+                <img
+                  src={techPosts.coverImage}
+                  alt=""
+                  fill
+                  className="h-full w-full object-cover"
+                />
+              </div>
+              <div className="absolute inset-0 bg-black bg-opacity-50" />
+              <div className="absolute bottom-2 px-4 text-white">
+                <span className="bg-blue-500 px-2 py-1 uppercase text-[10px] font-semibold rounded">
+                  {techPosts.category}
+                </span>
+                <article className="">
+                  <Link href={`/12`}>
+                    <h3 className="text-xl leading-[25px] my-2">
+                      {techPosts.title}
+                    </h3>
+                  </Link>
+                  <span className="text-sm">
+                    {formattedDate(techPosts.createdAt)}
+                  </span>
+                </article>
+              </div>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="w-full h-[200px] relative overflow-hidden rounded-lg">
+              <div className="w-full h-full relative">
+                <img
+                  src={sportsPosts.coverImage}
+                  alt=""
+                  fill
+                  className="h-full w-full object-cover"
+                />
+              </div>
+              <div className="absolute inset-0 bg-black bg-opacity-50" />
+              <div className="absolute bottom-2 px-4 text-white">
+                <span className="bg-blue-500 px-2 py-1 uppercase text-[10px] font-semibold rounded">
+                  {sportsPosts.category}
+                </span>
+                <article className="">
+                  <Link href={`/12`}>
+                    <h3 className="text-xl leading-[25px] my-2">
+                      {sportsPosts.title}
+                    </h3>
+                  </Link>
+                  <span className="text-sm">
+                    {formattedDate(sportsPosts.createdAt)}
+                  </span>
+                </article>
+              </div>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="w-full h-[200px] relative overflow-hidden rounded-lg">
+              <div className="w-full h-full relative">
+                <img
+                  src={entertainmentPosts.coverImage}
+                  alt=""
+                  fill
+                  className="h-full w-full object-cover"
+                />
+              </div>
+              <div className="absolute inset-0 bg-black bg-opacity-50" />
+              <div className="absolute bottom-2 px-4 text-white">
+                <span className="bg-blue-500 px-2 py-1 uppercase text-[10px] font-semibold rounded">
+                  {entertainmentPosts.category}
+                </span>
+                <article className="">
+                  <Link href={`/12`}>
+                    <h3 className="text-xl leading-[25px] my-2">
+                      {entertainmentPosts.title}
+                    </h3>
+                  </Link>
+                  <span className="text-sm">
+                    {formattedDate(entertainmentPosts.createdAt)}
+                  </span>
+                </article>
+              </div>
+            </div>
+          </SwiperSlide>
+        </Swiper>
+        {/* Similar structure for other categories */}
+      </div>
     </section>
   );
 };

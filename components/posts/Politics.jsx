@@ -56,8 +56,8 @@ const Politics = () => {
             Trending
           </h3>
         </div>
-        <div className="flex gap-2">
-          <div className="h-[275px] w-4/12 relative rounded overflow-hidden">
+        <div className="flex flex-col lg:flex-row gap-2">
+          <div className="h-[240px] lg:h-[275px] w-full lg:w-4/12 relative rounded-lg md:rounded overflow-hidden">
             <div className="w-full h-full relative">
               <Image
                 src="/images/lewy.jpg"
@@ -79,12 +79,11 @@ const Politics = () => {
               </article>
             </div>
           </div>
-          <div className="grid grid-cols-2 gap-3 w-8/12">
+          <div className="flex flex-wrap gap-2 w-full lg:w-10/12 my-5 lg:my-0">
             {data.map((item) => (
               <div className="flex gap-x-3 md:gap-x-0 h-max py-2 cursor-pointer group">
-                <div className="relative w-[80px] h-[70px] rounded overflow-hidden">
+                <div className="relative w-[80px] h-[50px] rounded overflow-hidden">
                   <Image
-                    // src="/images/stone.jpg"
                     src={item.coverImg}
                     alt=""
                     fill
@@ -94,15 +93,15 @@ const Politics = () => {
                 <article className="flex">
                   <div className="h-4 w-[3px] bg-black mx-2 group-hover:h-10 transition-all rounded hidden md:flex" />
                   <div>
-                    <h2 className="text-[14px] w-[230px] leading-[18px]">
+                    <h2 className="text-[16px] lg:text-[14px] w-full lg:w-[230px] leading-[18px]">
                       {item.title}
                     </h2>
-                    <div className="flex items-center gap-x-4 text-[10px]">
-                      <div className="flex items-center gap-x-1 text-gray-400">
+                    <div className="flex items-center gap-x-4 text-[11px] mt-1">
+                      <div className="flex items-center gap-x-1 text-gray-500">
                         <MdOutlineDateRange />
                         <span className="">{item.date}</span>
                       </div>
-                      <div className="flex items-center gap-x-1 text-gray-400">
+                      <div className="flex items-center gap-x-1 text-gray-500">
                         <FaReadme />
                         <span className="">{item.readTime} read</span>
                       </div>

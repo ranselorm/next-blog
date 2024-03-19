@@ -12,8 +12,8 @@ export default function Home() {
     <div className="mt-[20px]">
       <Featured />
       <div className="mt-10 flex gap-x-4">
-        {/* <News />
-        <Sidebar /> */}
+        <News />
+        <Sidebar />
       </div>
     </div>
   );

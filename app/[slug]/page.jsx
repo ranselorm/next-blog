@@ -18,9 +18,9 @@ const SingleBlogPost = () => {
   }, []);
 
   return (
-    <section className="mt-[50px] flex items-center justify-between font-primary">
+    <section className="flex items-center justify-between font-primary">
       <main className="w-full flex justify-between ">
-        <article className="bg-white w-8/12 p-6 rounded">
+        <article className="bg-white lg:w-8/12 md:p-6 px-3 pt-6 rounded">
           <span className="bg-blue-500 px-2 py-1 uppercase text-[14px] font-semibold rounded text-white">
             Sports
           </span>
@@ -28,7 +28,7 @@ const SingleBlogPost = () => {
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
             unde magnam facere recusandae a quos aliquid?
           </h3>
-          <div className="flex gap-x-3 text-sm items-center">
+          <div className="flex gap-x-2 text-[12px] md:text-sm items-center">
             <p className="text-gray-500">
               By <span className="text-black">Jenny Frank</span>
             </p>
@@ -41,7 +41,7 @@ const SingleBlogPost = () => {
               <MdOutlineRemoveRedEye /> <span>2 mins read</span>
             </p>
           </div>
-          <div className="relative h-[450px] w-full my-6 rounded overflow-hidden">
+          <div className="relative h-[200px] lg:h-[450px] w-full my-6 rounded overflow-hidden">
             <Image
               src="/images/lewy.jpg"
               alt=""
@@ -64,36 +64,7 @@ const SingleBlogPost = () => {
             </p>
           </section>
         </article>
-        <div className="w-3/12 border-2">
-          {/* <div className="bg-white px-2 py-6">
-            <h3 className="font-semibold text-md uppercase">Social Networks</h3>
-            <div className="grid grid-cols-3 gap-3">
-              <div className="bg-gray-100 px-2 py-1 w-max flex items-center gap-x-2 rounded">
-                <Image src={Facebook} width={13} height={13} />
-                <p className="text-[12px]">Facebook</p>
-              </div>
-              <div className="bg-gray-100 px-2 py-1 w-max flex items-center gap-x-2 rounded">
-                <Image src={Twitter} width={13} height={13} />
-                <p className="text-[12px]">Twitter</p>
-              </div>
-              <div className="bg-gray-100 px-2 py-1 w-max flex items-center gap-x-2 rounded">
-                <Image src={Youtube} width={13} height={13} />
-                <p className="text-[12px]">Youtube</p>
-              </div>
-              <div className="bg-gray-100 px-2 py-1 w-max flex items-center gap-x-2 rounded">
-                <Image src={TikTok} width={13} height={13} />
-                <p className="text-[12px]">TikTok</p>
-              </div>
-              <div className="bg-gray-100 px-2 py-1 w-max flex items-center gap-x-2 rounded">
-                <Image src={Whatsapp} width={13} height={13} />
-                <p className="text-[12px]">WhatsApp</p>
-              </div>
-              <div className="bg-gray-100 px-2 py-1 w-max flex items-center gap-x-2 rounded">
-                <Image src={Twitter} width={13} height={13} />
-                <p className="text-[12px]">Twitter</p>
-              </div>
-            </div>
-          </div> */}
+        <div className="w-3/12 border-2 hidden lg:block">
           <DialogUsageExample />
         </div>
       </main>

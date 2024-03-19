@@ -6,9 +6,9 @@ import Sports from "./posts/Sports";
 const News = () => {
   return (
     <>
-      <div className="w-full md:w-10/12">
+      <div className="w-full lg:w-10/12">
         <Politics />
-        <Sports />
+        {/* <Sports /> */}
         {/* <Trending /> */}
       </div>
     </>
